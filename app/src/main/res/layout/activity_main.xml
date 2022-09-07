@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/rl1"
+            >
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:id="@+id/clk"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextClock
+                    android:id="@+id/appwidget_text"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rl1"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                app:cardCornerRadius="10dp"
+                android:layout_height="200dp"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvStatus"
+                        android:layout_marginTop="5sp"
+                        android:layout_centerInParent="true"
+                        android:layout_above="@+id/batteryImage"
+                        android:text="Charging"/>
+                    <ImageView
+                        android:layout_width="140sp"
+                        android:layout_height="140sp"
+                        android:id="@+id/batteryImage"
+                        android:src="@drawable/b100"
+                        android:layout_centerInParent="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvPercentage"
+                        android:layout_marginTop="5sp"
+                        android:layout_centerInParent="true"
+                        android:layout_below="@id/batteryImage"
+                        android:text="100%"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            app:cardCornerRadius="10dp"
+            android:padding="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="city name"
+                    android:id="@+id/tvCityNmae"/>
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/tvCityNmae"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country name"
+                    android:id="@+id/tvCountryNmae"/>
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/tvCountryNmae"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Temperature"
+                    android:id="@+id/tvTemp"/>
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/tvTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Description"
+                    android:id="@+id/tvDesp"/>
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_alignParentBottom="true"
+                    android:padding="5sp"
+                    android:layout_height="80sp"
+                    android:id="@+id/appIv"
+                    android:src="@drawable/ic_baseline_apps_24"
+                    android:layout_centerInParent="true"
+                    
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</LinearLayout>
